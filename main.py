@@ -1,7 +1,7 @@
 import re
 
 def parse_config(config_file):
-    with open(config_file) as f:
+    with open(config_file, "r", encoding= "utf-8") as f:
         config = f.read()
     config = re.sub(r'//.*', '', config)
     config_dict = {}
